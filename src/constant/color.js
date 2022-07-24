@@ -1,3 +1,6 @@
 export const navbarColor = "#3B3B3B"
 export const navbarFontColor= "rgb(255, 255, 255)"
 export const arrivalCategoryColor ="#868686"
+export const blackColor = "#535353"
+export const facebookColor ="#196DD8"
+export const buttonColor ="#F50302"

@@ -2,9 +2,9 @@ import { Box, Divider, Flex, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 import Slider from 'react-slick'
 import { arrivalCategoryColor } from '../constant/color'
-import { newArrivalsData } from '../data/newArrivalsData'
+import sellingProductsData from '../data/sellingProductsData'
 
-const Arrivals = () => {
+const SellingProducts = () => {
     const settings = {
         dots: false,
         infinite: true,
@@ -17,23 +17,25 @@ const Arrivals = () => {
         <Flex justifyContent={"space-between"} >
             <Divider
             borderWidth={"1px"}
-            width={"42%"}/>
+            width={"40%"}/>
             <Text
             mt={-4}
             fontSize={20}
             fontWeight={700}>
-                New Arrivals
+                Best Selling Products
             </Text>
             <Divider
             borderWidth={"1px"}
-            width={"42%"}/>
+            width={"40%"}/>
             
         </Flex>
         <br/>
+        <br/>
           <Slider {...settings}>
-          {newArrivalsData.map((data,index)=>{
+          {sellingProductsData.map((data,index)=>{
+                console.log(data.image,"hello")
                 return(
-                    <div key={index} >
+                    <div>
                         <Image 
                         ml={10}
                         width={180}
@@ -57,7 +59,7 @@ const Arrivals = () => {
                         fontWeight={400}>
                             {data.details}
                         </Text>
-
+                        
                         <Text 
                         textAlign={"center"}
                         fontWeight={700}
@@ -74,4 +76,4 @@ const Arrivals = () => {
   )
 }
 
-export default Arrivals
+export default SellingProducts

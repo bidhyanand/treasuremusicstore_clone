@@ -2,7 +2,8 @@ import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
 import { navbarColor,navbarFontColor } from '../constant/color'
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-const Navbar = () => {
+import { contact, faq, returnPolicy } from '../constant/text';
+const Header = () => {
   return (
     <Box bgColor= {navbarColor} height="35px"  >
         <Flex gap={2} justifyContent="right" mr={"10%"} pt={2} >
@@ -12,7 +13,7 @@ const Navbar = () => {
             fontSize={"13px"}
             fontWeight={"400"}
             textAlign="center">
-                Contact
+                {contact}
             </Text> 
             
             <Text
@@ -21,7 +22,7 @@ const Navbar = () => {
             fontSize={"13px"}
             fontWeight={"400"}
             >
-                FAQ
+                {faq}
             </Text>
 
              <Text
@@ -31,7 +32,7 @@ const Navbar = () => {
             fontWeight={"400"}
             
             >
-                Return Policy
+                {returnPolicy}
             </Text>
 
             <Text
@@ -59,4 +60,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Header
