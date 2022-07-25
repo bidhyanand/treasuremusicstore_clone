@@ -1,8 +1,8 @@
 import { Box, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
-import { navbarColor,navbarFontColor } from '../../constant/color'
+import { navbarColor,navbarFontColor } from '../../../constant/color'
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { contact, faq, returnPolicy } from '../../constant/text';
+import { contact, faq, returnPolicy } from '../../../constant/text';
 const TopHeader = () => {
   return (
     <Box bgColor= {navbarColor} height="35px"  >
@@ -12,7 +12,8 @@ const TopHeader = () => {
             fontFamily="Oxygen, sans-serif"
             fontSize={"13px"}
             fontWeight={"400"}
-            textAlign="center">
+            textAlign="center"
+            cursor={"pointer"}>
                 {contact}
             </Text> 
             
@@ -21,7 +22,7 @@ const TopHeader = () => {
             fontFamily="Oxygen, sans-serif"
             fontSize={"13px"}
             fontWeight={"400"}
-            >
+            cursor={"pointer"}>
                 {faq}
             </Text>
 
@@ -30,7 +31,7 @@ const TopHeader = () => {
              fontFamily="Oxygen, sans-serif"
             fontSize={"13px"}
             fontWeight={"400"}
-            
+            cursor={"pointer"}
             >
                 {returnPolicy}
             </Text>
@@ -40,7 +41,7 @@ const TopHeader = () => {
              textColor={navbarFontColor}
              fontSize="12px"
              fontWeight={"400"}
-             >
+             cursor={"pointer"}>
             <FaFacebookF/>
             </Text>
 
@@ -48,7 +49,8 @@ const TopHeader = () => {
             pt={1}
             textColor={navbarFontColor}
             fontSize="12px"
-            fontWeight={"400"}>
+            fontWeight={"400"}
+            cursor={"pointer"}>
             <FaInstagram/>
             </Text>
 

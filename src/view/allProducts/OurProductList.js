@@ -1,11 +1,12 @@
-import { Text,Image, SimpleGrid } from '@chakra-ui/react'
+import { Text,Image, SimpleGrid, Box } from '@chakra-ui/react'
 import React from 'react'
-import { arrivalCategoryColor, lightRedColor } from '../constant/color'
-import categoriesData from '../data/categoriesData'
+import { arrivalCategoryColor, lightRedColor } from '../../constant/color'
+import categoriesData from '../../data/categoriesData'
 
 const OurProductList = () => {
   return (
-    <div>
+    <Box width={{base : "100%", md : "80%" }} ml={{md:"10%"}} mr={{md:"10%"}} >
+    
       <Text
       fontSize={"4xl"}
       textAlign={"center"}
@@ -19,9 +20,10 @@ const OurProductList = () => {
                     return (
                         <div key={index} >
                             <Image
-                                ml={5}
+                            my={"2%"}
                                 width={140}
                                 height={140}
+                                ml="25%"
                                 src={data.image} alt="newArrivals" />
 
                             
@@ -30,7 +32,6 @@ const OurProductList = () => {
                         textTransform="uppercase"
                         fontSize={"15px"}
                         fontWeight={700}
-                        ml={10}
                         textAlign="center">
                             {data.title}
                         </Text>
@@ -39,17 +40,17 @@ const OurProductList = () => {
                                 color={arrivalCategoryColor}
                                 fontSize={"12px"}
                                 fontWeight={400}
-                                ml={10}
                                 textAlign="center">
                                 {data.product} PRODUCTS
                             </Text>
+                            <br/>
 
                         </div>
                     )
                 })}
       </SimpleGrid>
 
-    </div>
+    </Box>
 
      
   )

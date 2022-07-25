@@ -1,44 +1,66 @@
 import { Box, Divider, Flex, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 import Slider from 'react-slick'
-import { arrivalCategoryColor } from '../constant/color'
-import { newArrivalsData } from '../data/newArrivalsData'
+import { arrivalCategoryColor } from '../../../constant/color'
+import sellingProductsData from '../../../data/sellingProductsData'
+import SaleBadge from '../../../badge/saleBadge'
+import { bestSellingProducts } from '../../../constant/text'
 
-const Arrivals = () => {
+const SellingProducts = () => {
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 1
-      };
+        slidesToScroll: 1,
+        responsive :[
+          {
+          breakpoint:1024,
+          settings : {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 3000,
+          }
+      }
+  ]
+  };
   return (
     <>
-        <Flex justifyContent={"space-between"} >
+        <Flex justifyContent={"space-between"} my={"4%"} >
             <Divider
             borderWidth={"1px"}
-            width={"42%"}/>
+            width={{base:"30%",md:"40%"}}/>
+            
             <Text
-            mt={-4}
-            fontSize={20}
+            mt={{base:"-2",md:"-4"}}
+            fontSize={{base:"12",md:"20"}}
             fontWeight={700}>
-                New Arrivals
+                {bestSellingProducts}
             </Text>
             <Divider
             borderWidth={"1px"}
-            width={"42%"}/>
+            width={{base:"30%",md:"40%"}}/>
             
         </Flex>
         <br/>
+        <br/>
           <Slider {...settings}>
-          {newArrivalsData.map((data,index)=>{
+          {sellingProductsData.map((data,index)=>{
                 return(
-                    <div key={index} >
+                    <div key={index}>
                         <Image 
                         ml={10}
                         width={180}
                         height={180}
                         src={data.image} alt="newArrivals"/>
+
+                      {data.sale && 
+                       <SaleBadge/>
+                      }
 
                         <Text
                         color={arrivalCategoryColor}
@@ -57,20 +79,31 @@ const Arrivals = () => {
                         fontWeight={400}>
                             {data.details}
                         </Text>
+                        
+                        <Text 
+                        textDecoration= {data.sale? "line-through":null}
+                        textAlign={"center"}
+                        fontWeight={700}
+                        fontSize={"15px"}>
+                          Rs  {data.price1}
+                        </Text>
 
+                        {data.price2 &&
+                        <>
                         <Text 
                         textAlign={"center"}
                         fontWeight={700}
                         fontSize={"15px"}>
-                          Rs  {data.price.toLocaleString()}
+                          Rs  {data.price2}
                         </Text>
+                        </>}
 
                     </div>
                 )
             })}
           </Slider>
-          </>
+    </>
   )
 }
 
-export default Arrivals
+export default SellingProducts

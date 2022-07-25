@@ -1,7 +1,7 @@
 import { GridItem, Image, SimpleGrid,Box} from '@chakra-ui/react'
-import sale from '../../images/sale.jpeg'
-import ourProducts from '../../images/ourProducts.jpeg'
-import aboutus from '../../images/aboutus.jpeg'
+import sale from '../../../images/sale.jpeg'
+import ourProducts from '../../../images/ourProducts.jpeg'
+import aboutus from '../../../images/aboutus.jpeg'
 import './salesBanner.css'
 import { useNavigate } from 'react-router'
 

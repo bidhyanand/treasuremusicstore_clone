@@ -1,6 +1,6 @@
 import React from 'react'
-import FooterContent from './FooterContent'
-import Footer from './Footer'
+import FooterContent from '../../Component/footers/footerContents/FooterContent'
+import Footer from '../../Component/footers/footer/Footer'
 const CombineFooter = () => {
   return (
     <div>

@@ -1,8 +1,8 @@
 import { Box, Container, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaAngleDown, FaCartPlus, FaSearch } from 'react-icons/fa'
-import { alctron, beyerdynamic, blog, brands, cart, departments, dj, guitarAccessories, guitarAmplifier, guitars, hexInstruments, home, keyboard, laney, login, manaslu, mxl, nativeInstruments, stagg, stopRecordingEquipments, ukulele } from '../../constant/text'
-import logo from '../../images/logo.jpeg'
+import { alctron, beyerdynamic, blog, brands, cart, departments, dj, guitarAccessories, guitarAmplifier, guitars, hexInstruments, home, keyboard, laney, login, manaslu, mxl, nativeInstruments, stagg, stopRecordingEquipments, ukulele } from '../../../constant/text'
+import logo from '../../../images/logo.jpeg'
 const Navbar = () => {
     return (
         <Box width={"80%"} ml={"10%"} mr={"10%"} >

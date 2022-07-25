@@ -1,8 +1,8 @@
 import { Box, Divider, Flex, Image, Text } from "@chakra-ui/react"
 import { FaAngleRight } from "react-icons/fa"
 import Slider from "react-slick";
-import { ourSellingBrands, ViewAllBrands } from "../constant/text";
-import sellingBrandsData from "../data/selingBrandsData";
+import { ourSellingBrands, ViewAllBrands } from "../../../constant/text";
+import sellingBrandsData from '../../../data/selingBrandsData'
 const SellingBrands = () => {
     const settings = {
         dots: false,
@@ -13,27 +13,43 @@ const SellingBrands = () => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 3000,
+        responsive :[
+            {
+            breakpoint:1024,
+            settings : {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 3000,
+            }
+        }
+    ]
     };
+    
     return (
 
         <>
 
-            <Flex justifyContent={"space-between"} >
+            <Flex justifyContent={"space-between"}  >
                 <Text
-                    fontSize={"20px"}
+                    fontSize={{base : "15px", md : "20"}}
                     fontWeight={700}>
                     {ourSellingBrands}
                 </Text>
 
                 <Flex>
                     <Text
-                        fontSize={"16px"}
-                        fontWeight={700}>
+                        fontSize={{base :"13" ,md:"16"}}
+                        fontWeight={700}
+                        cursor={"pointer"}>
                         {ViewAllBrands}
                     </Text>
 
                     <Text
-                        fontSize={"16px"}
+                        fontSize={{base:"13",md:"16"}}
                         fontWeight={400}
                         mt={1}>
                         <FaAngleRight />
@@ -43,20 +59,21 @@ const SellingBrands = () => {
 
 
             <Divider
+            my={"2%"}
                 borderWidth={"1px"}
             />
 
-            <Slider {...settings}>
+            <Slider {...settings} >
                 {sellingBrandsData.map((data, index) => {
                     return (
-                        <div key={index} >
+                        <Box  pl = {10} pr = {20}  key={index} >
 
                             <Image width={20}
                                 ml={8}
                                 src={data.image} alt="sellingBrand">
 
                             </Image>
-                        </div>
+                        </Box>
                     )
                 })}
 

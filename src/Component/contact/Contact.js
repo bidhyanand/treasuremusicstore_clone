@@ -4,7 +4,7 @@ import contactData from "../../data/contactData"
 
 const Contact = () => {
   return (
-        <SimpleGrid columns={3} my={"4%"} >
+        <SimpleGrid columns={{base:"1" , md :"3"}} my={"4%"} >
             {contactData.map((data,index)=>{
                 return(
                     <div key={index} >

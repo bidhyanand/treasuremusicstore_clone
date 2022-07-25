@@ -1,14 +1,15 @@
 import { Box, Button, Flex, GridItem, Input, SimpleGrid, Text } from '@chakra-ui/react'
-import { buttonColor, facebookColor, navbarColor } from '../../constant/color'
-import { signup } from '../../constant/text'
-import { footerContentData } from '../../data/footerContentData'
+import { buttonColor, facebookColor, navbarColor } from '../../../constant/color'
+import { signup } from '../../../constant/text'
+import { footerContentData } from '../../../data/footerContentData'
 
 const FooterContent = () => {
     return (
-        <Box bg={navbarColor} >
+         <Box bg={navbarColor} >
             <Box width={"80%"} ml={"10%"} mr={"10%"} bg={navbarColor}>
+        
 
-                <SimpleGrid columns={3} gap={5} >
+                <SimpleGrid columns={{base:"1" , md:"3"}} gap={{base : "3" ,md: "5"}} my={"4%"} >
                     <GridItem>
                         <br />
                         <Text
@@ -30,7 +31,7 @@ const FooterContent = () => {
 
                             {footerContentData.socialLinks.map((data, index) => {
                                 return (
-                                    <div>
+                                    <div key={index} >
 
                                         <Text
                                             borderRadius={"50%"}
@@ -80,7 +81,7 @@ const FooterContent = () => {
 
                         </Text>
                         <br />
-                        <iframe width="360" height="200" src="https://www.youtube.com/embed/rYnXIMmvTPo?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                        <iframe width={{base :"350", md:"360"}} height={{base:"190",md:"200"}} src="https://www.youtube.com/embed/rYnXIMmvTPo?start=7" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen
                         ></iframe>
                     </GridItem>
 
@@ -104,15 +105,16 @@ const FooterContent = () => {
                         <Input placeholder="Your Email (required)" />
                         <br />
                         <br />
-                        <Button bgColor={buttonColor} >{signup}</Button>
+                        <Button bgColor={buttonColor} mb={"4%"} >{signup}</Button>
 
 
                     </GridItem>
 
                 </SimpleGrid>
+                
 
-            </Box>
-        </Box>
+             </Box>
+         </Box>
     )
 }
 

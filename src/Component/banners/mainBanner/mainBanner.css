@@ -1,0 +1,12 @@
+.slick-prev,.slick-next{
+    background-color: black !important;
+}
+
+.slick-prev{
+    margin-left: 50px;
+    z-index: 9999 !important;
+}
+
+.slick-next{
+    margin-right: 50px;
+}

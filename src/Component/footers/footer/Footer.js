@@ -1,15 +1,15 @@
 import { Box, Divider, Flex, Text } from '@chakra-ui/react'
 import { FaChevronUp, FaCommentDots, FaRegCopyright } from 'react-icons/fa'
-import { arrivalCategoryColor, lightRedColor } from '../../constant/color'
-import { contact, copyright, faq, returnPolicy, treasureMusicStore } from '../../constant/text'
+import { arrivalCategoryColor, lightRedColor } from '../../../constant/color'
+import { contact, copyright, faq, returnPolicy, treasureMusicStore } from '../../../constant/text'
 const Footer = () => {
     return (
         <Box width={"80%"} ml={"10%"} mr={"10%"} my={"5"} >
 
-            <Flex gap={4}  >
+            <Flex gap={4} justifyContent={{base:"center",md:"flex-start"}} >
                 <Text
                     textTransform="uppercase"
-                    fontSize={12}
+                    fontSize={{base:"11px",md:"12px"}}
                     fontWeight={400}
                     color={arrivalCategoryColor}
                     cursor="pointer">
@@ -18,7 +18,7 @@ const Footer = () => {
 
                 <Text
                     textTransform="uppercase"
-                    fontSize={12}
+                    fontSize={{base: "11px",md:"12px"}}
                     fontWeight={400}
                     color={arrivalCategoryColor}
                     cursor="pointer">
@@ -27,7 +27,7 @@ const Footer = () => {
 
                 <Text
                     textTransform="uppercase"
-                    fontSize={14}
+                    fontSize={{base:"11px",md:"14px"}}
                     fontWeight={400}
                     color={arrivalCategoryColor}
                     cursor="pointer">
@@ -38,25 +38,25 @@ const Footer = () => {
             <Divider
                 width={60} />
 
-            <Flex gap={1}  >
+            <Flex gap={1} justifyContent={{base : "center",md:"flex-start"}} >
                 <Text
-                    fontSize={12}
+                    fontSize={{base:"10px",md :"12px"}}
                     fontWeight={400}
                     color={arrivalCategoryColor}>
                     {copyright}
                 </Text>
 
-                <Text
+                <Text 
                     mt={1}
                     textTransform="uppercase"
-                    fontSize={13}
+                    fontSize={{base:"10px",md:"13px"}}
                     fontWeight={400}
                     color={arrivalCategoryColor}>
                     <FaRegCopyright />
                 </Text>
 
                 <Text
-                    fontSize={14}
+                    fontSize={{base:"10",md:"14"}}
                     fontWeight={700}
                     color={arrivalCategoryColor}
                     cursor="pointer">
@@ -69,7 +69,7 @@ const Footer = () => {
             <Box
                 position={"fixed"}
                 bottom={10}
-                left={10}
+                left={{base:"5",md:"10"}}
             >
                 <Text
                     border={"2px solid black"}
