@@ -14,7 +14,7 @@ const OurProductList = () => {
         List Of Products
       </Text>
 
-      <SimpleGrid>
+      <SimpleGrid columns={4}>
       {categoriesData.map((data, index) => {
                     return (
                         <div key={index} >
