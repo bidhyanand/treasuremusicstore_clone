@@ -7,7 +7,7 @@ import carouselImage6 from '../images/slider/slider6.jpeg'
 import carouselImage7 from '../images/slider/slider7.png'
 import carouselImage8 from '../images/slider/slider8.jpeg'
 
-const carouselData=[{
+const mainBannerData=[{
     image: carouselImage1
 },
 {
@@ -31,4 +31,4 @@ const carouselData=[{
 {
     image: carouselImage8
 }]
-export default carouselData
+export default mainBannerData

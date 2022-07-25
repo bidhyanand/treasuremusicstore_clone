@@ -16,7 +16,7 @@ const SellingBrands = () => {
     };
     return (
 
-        <Box width={"80%"} ml={"10%"} mr={"10%"} >
+        <>
 
             <Flex justifyContent={"space-between"} >
                 <Text
@@ -61,8 +61,8 @@ const SellingBrands = () => {
                 })}
 
             </Slider>
+            </>
 
-        </Box>
 
     )
 }

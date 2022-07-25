@@ -3,6 +3,7 @@ import React from 'react'
 import Slider from 'react-slick'
 import { arrivalCategoryColor } from '../constant/color'
 import sellingProductsData from '../data/sellingProductsData'
+import SaleBadge from '../badge/saleBadge'
 
 const SellingProducts = () => {
     const settings = {
@@ -13,7 +14,7 @@ const SellingProducts = () => {
         slidesToScroll: 1
       };
   return (
-    <Box width={"80%"} ml={"10%"} mr={"10%"} >
+    <>
         <Flex justifyContent={"space-between"} >
             <Divider
             borderWidth={"1px"}
@@ -42,6 +43,10 @@ const SellingProducts = () => {
                         height={180}
                         src={data.image} alt="newArrivals"/>
 
+                      {data.sale && 
+                       <SaleBadge/>
+                      }
+
                         <Text
                         color={arrivalCategoryColor}
                         textTransform="uppercase"
@@ -64,15 +69,24 @@ const SellingProducts = () => {
                         textAlign={"center"}
                         fontWeight={700}
                         fontSize={"15px"}>
-                          Rs  {data.price.toLocaleString()}
+                          Rs  {data.price1}
                         </Text>
+
+                        {data.price2 &&
+                        <>
+                        <Text 
+                        textAlign={"center"}
+                        fontWeight={700}
+                        fontSize={"15px"}>
+                          Rs  {data.price2}
+                        </Text>
+                        </>}
 
                     </div>
                 )
             })}
           </Slider>
-        {/* </Flex> */}
-    </Box>
+    </>
   )
 }
 

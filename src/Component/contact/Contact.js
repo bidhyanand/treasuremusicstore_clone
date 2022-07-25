@@ -1,12 +1,10 @@
-import { Avatar, Box, Center, Flex, Image, SimpleGrid, Text, Wrap, WrapItem } from "@chakra-ui/react"
-import { FaMedal } from "react-icons/fa"
-import { arrivalCategoryColor, blackColor, whiteColor,navbarColor } from "../constant/color"
-import contactData from "../data/contactData"
+import {  Box, Center,  SimpleGrid, Text,} from "@chakra-ui/react"
+import { navbarColor } from "../../constant/color"
+import contactData from "../../data/contactData"
 
 const Contact = () => {
   return (
-    <Box width={"80%"} ml={"10%"} mr={"10%"} >
-        <SimpleGrid columns={3}>
+        <SimpleGrid columns={3} my={"4%"} >
             {contactData.map((data,index)=>{
                 return(
                     <div key={index} >
@@ -48,7 +46,6 @@ const Contact = () => {
                 )
             })}
         </SimpleGrid>
-    </Box>
 
   )
 }

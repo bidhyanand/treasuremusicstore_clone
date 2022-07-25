@@ -1,37 +1,21 @@
-import { Box, Divider, Flex, Image, Text } from '@chakra-ui/react'
+import { Text,Image, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
-import Slider from 'react-slick'
-import { arrivalCategoryColor } from '../constant/color'
+import { arrivalCategoryColor, lightRedColor } from '../constant/color'
 import categoriesData from '../data/categoriesData'
 
-const Categories = () => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 7,
-        slidesToScroll: 1
-    };
-    return (
-        <>
-            <Flex justifyContent={"space-between"} mt={"4%"} >
-                <Divider
-                    borderWidth={"1px"}
-                    width={"40%"} />
-                <Text
-                    mt={-4}
-                    fontSize={20}
-                    fontWeight={700}>
-                    Browse Our Categories
-                </Text>
-                <Divider
-                    borderWidth={"1px"}
-                    width={"40%"} />
+const OurProductList = () => {
+  return (
+    <div>
+      <Text
+      fontSize={"4xl"}
+      textAlign={"center"}
+      fontWeight="bold"
+      color={lightRedColor}>
+        List Of Products
+      </Text>
 
-            </Flex>
-            <br />
-            <Slider {...settings}>
-                {categoriesData.map((data, index) => {
+      <SimpleGrid>
+      {categoriesData.map((data, index) => {
                     return (
                         <div key={index} >
                             <Image
@@ -63,9 +47,12 @@ const Categories = () => {
                         </div>
                     )
                 })}
-            </Slider>
-            </>
-    )
+      </SimpleGrid>
+
+    </div>
+
+     
+  )
 }
 
-export default Categories
+export default OurProductList

@@ -3,8 +3,8 @@ import { FaAngleRight } from "react-icons/fa"
 import Slider from "react-slick";
 import { ourAuthorizedBrands, viewAuthorizedBrands } from "../constant/text";
 import authorizedBrandsData from "../data/authorizedBrandsData"
-
-const AuthorizedBrands = () => {
+import { dummyAuthorization } from "../data/dummyData";
+const AuthorizedCardDesign = () => {
     const settings = {
         dots: false,
         infinite: true,
@@ -15,8 +15,11 @@ const AuthorizedBrands = () => {
         speed: 2000,
         autoplaySpeed: 3000,
     };
+    
     return (
-        <Box width={"80%"} ml={"10%"} mr={"10%"} >
+
+        
+<>
 
             <Flex justifyContent={"space-between"} >
                 <Text
@@ -48,6 +51,7 @@ const AuthorizedBrands = () => {
 
             <Slider {...settings}>
                 {authorizedBrandsData.map((data, index) => {
+                    
                     return (
                         <div key={index} >
 
@@ -62,8 +66,8 @@ const AuthorizedBrands = () => {
 
             </Slider>
 
-        </Box>
+       </>
     )
 }
 
-export default AuthorizedBrands
+export default AuthorizedCardDesign

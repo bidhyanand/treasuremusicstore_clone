@@ -13,7 +13,7 @@ const Arrivals = () => {
         slidesToScroll: 1
       };
   return (
-    <Box width={"80%"} ml={"10%"} mr={"10%"} >
+    <>
         <Flex justifyContent={"space-between"} >
             <Divider
             borderWidth={"1px"}
@@ -69,8 +69,7 @@ const Arrivals = () => {
                 )
             })}
           </Slider>
-        {/* </Flex> */}
-    </Box>
+          </>
   )
 }
 

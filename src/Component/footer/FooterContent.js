@@ -1,7 +1,7 @@
 import { Box, Button, Flex, GridItem, Input, SimpleGrid, Text } from '@chakra-ui/react'
-import { buttonColor, facebookColor, navbarColor } from '../constant/color'
-import { signup } from '../constant/text'
-import { footerContentData } from '../data/footerContentData'
+import { buttonColor, facebookColor, navbarColor } from '../../constant/color'
+import { signup } from '../../constant/text'
+import { footerContentData } from '../../data/footerContentData'
 
 const FooterContent = () => {
     return (

@@ -1,22 +1,18 @@
 import { Box, Divider, Flex, Text } from '@chakra-ui/react'
 import { FaChevronUp, FaCommentDots, FaRegCopyright } from 'react-icons/fa'
-import { arrivalCategoryColor } from '../constant/color'
-import { contact, copyright, faq, returnPolicy, treasureMusicStore } from '../constant/text'
+import { arrivalCategoryColor, lightRedColor } from '../../constant/color'
+import { contact, copyright, faq, returnPolicy, treasureMusicStore } from '../../constant/text'
 const Footer = () => {
     return (
-        <Box width={"80%"} ml={"10%"} mr={"10%"} >
-
-
-
-            <br />
-
+        <Box width={"80%"} ml={"10%"} mr={"10%"} my={"5"} >
 
             <Flex gap={4}  >
                 <Text
                     textTransform="uppercase"
                     fontSize={12}
                     fontWeight={400}
-                    color={arrivalCategoryColor}>
+                    color={arrivalCategoryColor}
+                    cursor="pointer">
                     {contact}
                 </Text>
 
@@ -24,7 +20,8 @@ const Footer = () => {
                     textTransform="uppercase"
                     fontSize={12}
                     fontWeight={400}
-                    color={arrivalCategoryColor}>
+                    color={arrivalCategoryColor}
+                    cursor="pointer">
                     {faq}
                 </Text>
 
@@ -32,7 +29,8 @@ const Footer = () => {
                     textTransform="uppercase"
                     fontSize={14}
                     fontWeight={400}
-                    color={arrivalCategoryColor}>
+                    color={arrivalCategoryColor}
+                    cursor="pointer">
                     {returnPolicy}
                 </Text>
 
@@ -60,7 +58,8 @@ const Footer = () => {
                 <Text
                     fontSize={14}
                     fontWeight={700}
-                    color={arrivalCategoryColor}>
+                    color={arrivalCategoryColor}
+                    cursor="pointer">
                     {treasureMusicStore}
                 </Text>
 
@@ -76,7 +75,7 @@ const Footer = () => {
                     border={"2px solid black"}
                     fontSize={"40px"}
                     _hover={
-                        { background: "red" }
+                        { background: lightRedColor }
                     }
                 >
                     <a href='#'>
@@ -93,7 +92,7 @@ const Footer = () => {
                 <Text
                     pt={2}
                     pl={3}
-                    bg={"red"}
+                    bg={lightRedColor}
                     width={50}
                     height={50}
                     borderRadius={"50%"}

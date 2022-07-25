@@ -1,21 +1,21 @@
 import { Box, Container, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
 import React from 'react'
 import { FaAngleDown, FaCartPlus, FaSearch } from 'react-icons/fa'
-import { alctron, beyerdynamic, blog, brands, cart, departments, dj, guitarAccessories, guitarAmplifier, guitars, hexInstruments, home, keyboard, laney, login, manaslu, mxl, nativeInstruments, stagg, stopRecordingEquipments, ukulele } from '../constant/text'
-import logo from '../images/logo.jpeg'
-const Dashboard = () => {
+import { alctron, beyerdynamic, blog, brands, cart, departments, dj, guitarAccessories, guitarAmplifier, guitars, hexInstruments, home, keyboard, laney, login, manaslu, mxl, nativeInstruments, stagg, stopRecordingEquipments, ukulele } from '../../constant/text'
+import logo from '../../images/logo.jpeg'
+const Navbar = () => {
     return (
         <Box width={"80%"} ml={"10%"} mr={"10%"} >
 
 
-            <Flex justifyContent={"space-between"} >
+            <Flex justifyContent={"space-between"} align="center" justify="flex-start" >
 
                 <Image
                     width={"100px"}
                     height={"100px"}
                     src={logo} alt="Logo" />
 
-                <Flex gap={3} justifyContent="center" mt={"10"} >
+                <Flex gap={3} justifyContent="center" cursor={"pointer"} >
                     <Text
                         fontWeight="light"
                         fontSize="15px">
@@ -106,38 +106,17 @@ const Dashboard = () => {
                         {blog}
                     </Text>
 
-{/* menu */}
-{/* <Flex>
-<Menu>
-  <MenuButton as="text" >
-    Actions
-  </MenuButton>
-  <MenuList>
-    <MenuItem>Download</MenuItem>
-    <MenuItem>Create a Copy</MenuItem>
-    <MenuItem>Mark as Draft</MenuItem>
-    <MenuItem>Delete</MenuItem>
-    <MenuItem>Attend a Workshop</MenuItem>
-  </MenuList>
-</Menu>
-<Text>
-    <FaAngleDown/>
-</Text>
-</Flex> */}
 
-
-
-{/* popover */}
 
                 </Flex>
 
-                <Flex gap={5} mt={10} >
+                <Flex gap={5}align="center" cursor={"pointer"} >
                     <Text
                         fontWeight={"medium"}
                         fontSize={"13px"}>
                         {login}
                     </Text>
-                    <Flex gap={2}>
+                    <Flex gap={2} align="center" cursor={"pointer"} >
                         <Text
                             fontWeight={"medium"}
                             fontSize={"13px"}>
@@ -157,4 +136,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default Navbar
