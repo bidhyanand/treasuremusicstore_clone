@@ -8,17 +8,16 @@ import DrawerDesign from '../../drawer/Drawer'
 import DrawerContent from './DracwerContent'
 const MobileHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const btnRef = useRef()
 
 
   return (
-    <div>
+    <Box display={{base : "inline", md : "none"}} >
       <Box height={"35px"}
         bgColor={navbarColor} />
 
       <Container>
         <Flex justifyContent={"space-between"} align={"center"} >
-          <FaAlignJustify ref={btnRef} onClick={onOpen} fontSize={"30px"} pt={5} />
+          <FaAlignJustify  onClick={onOpen} fontSize={"30px"} pt={5} />
 
           <Image src={logo} alt="logo" height={"80px"} />
           <FaCartPlus
@@ -33,7 +32,7 @@ const MobileHeader = () => {
         <DrawerContent />
       </DrawerDesign>
 
-    </div>
+    </Box>
   )
 }
 

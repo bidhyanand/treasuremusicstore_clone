@@ -81,7 +81,7 @@ const FooterContent = () => {
 
                         </Text>
                         <br />
-                        <iframe  src="https://www.youtube.com/embed/rYnXIMmvTPo?start=7" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullscreen
+                        <iframe  src="https://www.youtube.com/embed/rYnXIMmvTPo?start=7" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen
                         ></iframe>
                     </GridItem>
 

@@ -1,11 +1,9 @@
 import { Button, Divider, Flex, Input, InputGroup, InputRightElement, Menu, MenuButton, MenuItem, MenuList, Text, VStack } from '@chakra-ui/react'
 import { BsSearch } from 'react-icons/bs'
 import { FaAngleDown } from 'react-icons/fa'
-import { useNavigate } from 'react-router'
 import { departments, guitarAccessories, guitarAmplifier, guitars, keyboard } from '../../../constant/text'
 
 const DracwerContent = () => {
-    const navigate = useNavigate()
     return (
         <Flex justifyContent={"flex-start"} my="10%" width={"100%"} >
             <VStack align={"start"} spacing="4%" cursor={"pointer"} >
@@ -17,7 +15,7 @@ const DracwerContent = () => {
                     borderWidth={"1px"}
                     borderColor="gray.200" />
 
-                <Text fontSize="20px" onClick={() => navigate('/')}  >
+                <Text fontSize="20px"   >
                     Home
                 </Text>
                 <Divider

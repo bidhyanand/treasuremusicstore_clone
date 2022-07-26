@@ -51,6 +51,7 @@ const SellingProducts = () => {
         {sellingProductsData.map((data, index) => {
           return (
             <ProductCardDesign key={index} 
+            showQuickView
             data={data}
             >
 

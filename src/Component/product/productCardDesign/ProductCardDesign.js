@@ -1,14 +1,30 @@
-import { Box, Image, Text } from "@chakra-ui/react"
+import { Box, Image, Text, useDisclosure } from "@chakra-ui/react"
 import { useState } from "react"
 import QuickView from "../../../badge/quickView/QuickView"
 import SaleBadge from "../../../badge/saleBadge/SaleBadge"
 import { arrivalCategoryColor } from "../../../constant/color"
+import ModalDesign from "../../../modal/ModalDesign"
 
 const ProductCardDesign = ({ data, showQuickView }) => {
     const [quickViewShown, setShowQuickViewShown] = useState(false)
     const handleHover = ()=>{
         setShowQuickViewShown(!quickViewShown)
     }
+
+    // for Modal
+    const {isOpen,onClose,onOpen}=useDisclosure()
+
+    // states to store the clickedIndex
+    // const [clickedIndex,setClickedIndex] = useState(-1)
+
+    // function for image
+    const handleModal=(index)=>{
+        console.log(index,"hello index");
+        // setClickedIndex(index)
+        onOpen()
+
+    }
+
     return (
         <Box 
         onMouseEnter={handleHover}
@@ -19,7 +35,9 @@ const ProductCardDesign = ({ data, showQuickView }) => {
                 ml={10}
                 width={180}
                 height={180}
-                src={showQuickView && quickViewShown ? data.image1:data.image} alt="newArrivals" />
+                src={showQuickView && quickViewShown ? data.image1:data.image} alt="newArrivals"
+                />
+
 
             <Text
                 color={arrivalCategoryColor}
@@ -69,9 +87,11 @@ const ProductCardDesign = ({ data, showQuickView }) => {
             }
 
             {showQuickView && quickViewShown &&
+            
+            <Box onClick={handleModal} >
             <QuickView/>
+            </Box>
             }
-
             
             
 
@@ -95,12 +115,15 @@ textAlign="center">
 </Text>
 
             {/* modal design */}
-            {/* <ModalDesign isModalOpen={isOpen} isModalClose={onClose} >
-                {clickedIndex !== -1 && <>
+            <ModalDesign isModalOpen={isOpen} isModalClose={onClose} >
+                {/* {clickedIndex !== -1 && <>
 
-                </>}
+                </>} */}
+                <Image src={data.image}  />
+                <br/>
+                {data.category}
 
-            </ModalDesign> */}
+            </ModalDesign>
         </Box>
     )
 }

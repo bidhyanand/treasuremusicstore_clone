@@ -13,8 +13,9 @@ const QuickView = () => {
             color="white"
             fontWeight={"bold"}
             position={"absolute"}
-            bottom={"45%"}
+            bottom={"47%"}
             ml={"35px"}
+            cursor = "pointer"
             opacity = {0.8}
         >
             {quickview}

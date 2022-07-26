@@ -23,6 +23,7 @@ export const sellingProductsData = [{
     price1 : 4500.00,
     price2 : 3000.00,
     sale : true,
+    showQuickView: true
     
     
 },
@@ -33,6 +34,7 @@ export const sellingProductsData = [{
     details : "Manaslu Stainless Steel Capo for Guitar",
     price1: 950.00,
     price2: 500.00,
+    showQuickView: true,
     sale : true,
     
 
@@ -45,6 +47,7 @@ export const sellingProductsData = [{
     price1 : 16000.50,
     price2 : 14800.50,
     sale : true,
+    showQuickView: true
     
 
 },
@@ -54,6 +57,7 @@ export const sellingProductsData = [{
     category: "Audio/Microphone Cable, Microphones",
     details: "Alctron L3018-3m Balance Microphone XLR Cable",
     price1 : 900.00,
+    showQuickView: true
     
 
 
@@ -64,6 +68,7 @@ export const sellingProductsData = [{
     category : "Capo, Ukulele",
     details : "Ukulele Capo, Normal",
     price1 : 300.00,
+    showQuickView: true
     
 
 },
@@ -73,6 +78,7 @@ export const sellingProductsData = [{
     category : "Acoustic Guitars",
     details : "Yamaha F310 Acoustic Guitar, Natural",
     price1: 16500.00,
+    showQuickView: true
     
 
 },
@@ -84,6 +90,7 @@ export const sellingProductsData = [{
     price1: 170000.00,
     price2: 145000.00,
     sale:true,
+    showQuickView: true
     
 
 },
@@ -93,6 +100,7 @@ export const sellingProductsData = [{
     category :"Acoustic Guitar Strings",
     details : "DAddario EJ26 Phosphor Bronze Acoustic Guitar Strings, Custom Light",
     price1: 1100.00,
+    showQuickView: true
     
 
 }

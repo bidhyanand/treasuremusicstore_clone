@@ -1,12 +1,12 @@
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from "@chakra-ui/react"
 
-const ModalDesign = (children,title,isModalOpen,isModalClose) => {
+const ModalDesign = ({children,title,isModalOpen,isModalClose}) => {
   return (
         <Modal isOpen={isModalOpen} onClose={isModalClose} size="lg" >
             <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            {title}
+            Product Detail
             </ModalHeader>
           <ModalCloseButton />
           <ModalBody>

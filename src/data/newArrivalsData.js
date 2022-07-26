@@ -24,6 +24,7 @@ export const newArrivalsData = [{
     category: "Studio Monitor Speakers",
     details : "Focal Alpha 80 Evo 8-inch Powered Studio Monitor, Pair",
     price : 175000.12,
+    showQuickView: true
     
 
     
@@ -34,6 +35,7 @@ export const newArrivalsData = [{
     category: "Studio Monitor Speakers",
     details : "Focal Alpha 65 Evo 6.5 inch Powered Studio Monitor, Pair",
     price : 145000.00,
+    showQuickView: true
     
 
 },
@@ -43,6 +45,7 @@ export const newArrivalsData = [{
     category: "Studio Monitor Speakers",
     details : "Focal Alpha 50 Evo 5 inch Powered Studio Monitor, Pair",
     price : 115000.00,
+    showQuickView: true
     
 
 },
@@ -52,6 +55,7 @@ export const newArrivalsData = [{
     category: "Studio Monitor Speakers",
     details: "PreSonus Eris E4.5 4.5 inch Powered Studio Monitors",
     price : 28500.00,
+    showQuickView: true
     
 
 
@@ -62,6 +66,7 @@ export const newArrivalsData = [{
     category : "Headphones",
     details : "Beyerdynamic DT 900 PRO X Studio Headphone",
     price : 36000.00,
+    showQuickView: true
     
 
 },
@@ -71,6 +76,7 @@ export const newArrivalsData = [{
     category : "Microphones",
     details : "Beyerdynamic TG Drum Set PRO M Drum Microphone Set",
     price : 90000,
+    showQuickView: true
     
 
 },
@@ -80,6 +86,7 @@ export const newArrivalsData = [{
     category : "Microphones",
     details :"Beyerdynamic TG D71 Condenser Boundary Microphone, Semi Cardioid",
     price: 30000.00,
+    showQuickView: true
     
 
 },
@@ -89,6 +96,7 @@ export const newArrivalsData = [{
     category :"Microphones",
     details : "Beyerdynamic M 90 PRO X Cardiod Condenser Microphone",
     price: 41500.00,
+    showQuickView: true
     
 
 },
@@ -98,6 +106,7 @@ export const newArrivalsData = [{
     category : "Microphones",
     details : "Beyerdynamic TG V35 s Dynamic Vocal Microphone",
     price: 8000.00,
+    showQuickView: true
     
 
 }]

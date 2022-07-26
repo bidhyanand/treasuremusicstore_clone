@@ -29,18 +29,7 @@ const NewArrivals = () => {
         ]
     };
 
-    const {isOpen,onClose,onOpen}=useDisclosure()
-
-    // states to store the clickedIndex
-    const [clickedIndex,setClickedIndex] = useState(-1)
-
-    // function for image
-    const handleModal=(index)=>{
-        console.log(index,"hello index");
-        setClickedIndex(index)
-        onOpen()
-
-    }
+  
 
     return (
         <>
