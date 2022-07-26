@@ -1,5 +1,4 @@
-import { Button, Divider, Flex, Input, InputGroup, InputRightElement, Menu, MenuButton, MenuItem, MenuList, Select, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
+import { Button, Divider, Flex, Input, InputGroup, InputRightElement, Menu, MenuButton, MenuItem, MenuList, Text, VStack } from '@chakra-ui/react'
 import { BsSearch } from 'react-icons/bs'
 import { FaAngleDown } from 'react-icons/fa'
 import { useNavigate } from 'react-router'
@@ -18,7 +17,7 @@ const DracwerContent = () => {
                     borderWidth={"1px"}
                     borderColor="gray.200" />
 
-                <Text fontSize="20px" onClick={()=>navigate('/')}  >
+                <Text fontSize="20px" onClick={() => navigate('/')}  >
                     Home
                 </Text>
                 <Divider
@@ -28,7 +27,7 @@ const DracwerContent = () => {
                     <Menu >
                         <MenuButton as="text"  >
                             <Text
-                            
+
                                 fontSize="20px">
                                 {departments}
                             </Text>
@@ -41,13 +40,13 @@ const DracwerContent = () => {
 
                         </MenuList>
                         <Button
-                        ml={"50%"}
+                            ml={"50%"}
                             bg={"none"}
-                            _hover={{bg:"nonw"}}
+                            _hover={{ bg: "nonw" }}
                             alignSelf={"center"}
                             fontWeight={"400"}
                             fontSize={"40px"}>
-                            <FaAngleDown  />
+                            <FaAngleDown />
                         </Button>
                     </Menu>
 

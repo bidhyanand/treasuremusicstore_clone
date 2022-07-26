@@ -6,7 +6,7 @@ import authorizedBrands5 from '../images/authorizeBrands/5.jpeg'
 import authorizedBrands6 from '../images/authorizeBrands/6.jpeg'
 import authorizedBrands7 from '../images/authorizeBrands/7.jpeg'
 import authorizedBrands8 from '../images/authorizeBrands/8.jpeg'
-const authorizedBrandsData=[{
+const authorizedBrandsData = [{
     image: authorizedBrands1
 },
 {

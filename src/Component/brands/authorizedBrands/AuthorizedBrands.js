@@ -3,6 +3,7 @@ import { FaAngleRight } from "react-icons/fa"
 import Slider from "react-slick";
 import { ourAuthorizedBrands, viewAuthorizedBrands } from "../../../constant/text";
 import authorizedBrandsData from '../../../data/authorizedBrandsData'
+import BrandsCardDesign from "../brandsCardDesign/BrandsCardDesign";
 const AuthorizedBrands = () => {
     const settings = {
         dots: false,
@@ -13,43 +14,43 @@ const AuthorizedBrands = () => {
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 3000,
-        responsive :[
+        responsive: [
             {
-            breakpoint:1024,
-            settings : {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 3000,
+                breakpoint: 1024,
+                settings: {
+                    infinite: true,
+                    speed: 500,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    speed: 2000,
+                    autoplaySpeed: 3000,
+                }
             }
-        }
-    ]
+        ]
     };
-    
+
     return (
 
-        
-<>
+
+        <>
             <Flex justifyContent={"space-between"}  >
                 <Text
-                    fontSize={{base : "15" , md : "20"}}
+                    fontSize={{ base: "15", md: "20" }}
                     fontWeight={700}>
                     {ourAuthorizedBrands}
                 </Text>
 
                 <Flex>
                     <Text
-                        fontSize={{base : "13px", md : "16px"}}
+                        fontSize={{ base: "13px", md: "16px" }}
                         fontWeight={700}
                         cursor="pointer">
                         {viewAuthorizedBrands}
                     </Text>
 
                     <Text
-                        fontSize={{base : "13px" , md : "16px" }}
+                        fontSize={{ base: "13px", md: "16px" }}
                         fontWeight={400}
                         mt={1}>
                         <FaAngleRight />
@@ -59,28 +60,24 @@ const AuthorizedBrands = () => {
 
 
             <Divider
-            my={"2%"}
+                my={"2%"}
                 borderWidth={"1px"}
             />
 
             <Slider {...settings} >
                 {authorizedBrandsData.map((data, index) => {
-                    
+
                     return (
-                        <Box pl = {10} pr = {20}  key={index} >
-
-                            <Image width={20}
-                                ml={8}
-                                src={data.image} alt="authorizedBrand">
-
-                            </Image>
-                        </Box>
+                        <BrandsCardDesign
+                        key={index}
+                        data={data}
+                        />
                     )
                 })}
 
             </Slider>
 
-       </>
+        </>
     )
 }
 

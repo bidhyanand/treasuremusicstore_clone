@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react"
-
+import { quickview, sale } from "../../constant/text"
+import './saleBadge.css'
 const SaleBadge = () => {
     return (
         <Box className="badgeDesign"
@@ -13,9 +14,9 @@ const SaleBadge = () => {
             fontWeight={"bold"}
             position={"absolute"}
             top={8}
-            ml = {5}
+            ml={5}
         >
-            Sale!
+            {sale}
         </Box>
     )
 }

@@ -1,5 +1,4 @@
-import { Box, Container, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Flex, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
 import { FaAngleDown, FaCartPlus, FaSearch } from 'react-icons/fa'
 import { alctron, beyerdynamic, blog, brands, cart, departments, dj, guitarAccessories, guitarAmplifier, guitars, hexInstruments, home, keyboard, laney, login, manaslu, mxl, nativeInstruments, stagg, stopRecordingEquipments, ukulele } from '../../../constant/text'
 import logo from '../../../images/logo.jpeg'
@@ -32,68 +31,68 @@ const Navbar = () => {
                     </a>
 
                     <Flex>
-                    <Menu>
-  <MenuButton as="text" >
-                        <Text
-                            textTransform="uppercase"
+                        <Menu>
+                            <MenuButton as="text" >
+                                <Text
+                                    textTransform="uppercase"
 
-                            fontWeight={"medium"}
-                            fontSize="13px">
-                            {departments}
-                        </Text> 
-                        </MenuButton>
-                        <MenuList>
-    <MenuItem>{guitars}</MenuItem>
-    <MenuItem>{guitarAmplifier}</MenuItem>
-    <MenuItem>{keyboard}</MenuItem>
-    <MenuItem>{guitarAccessories}</MenuItem>
-    <MenuItem>{ukulele}</MenuItem>
-    <MenuItem>{stopRecordingEquipments}</MenuItem>
-    <MenuItem>{dj}</MenuItem>
-  </MenuList>
-                        <Text
-                            textTransform="uppercase"
+                                    fontWeight={"medium"}
+                                    fontSize="13px">
+                                    {departments}
+                                </Text>
+                            </MenuButton>
+                            <MenuList>
+                                <MenuItem>{guitars}</MenuItem>
+                                <MenuItem>{guitarAmplifier}</MenuItem>
+                                <MenuItem>{keyboard}</MenuItem>
+                                <MenuItem>{guitarAccessories}</MenuItem>
+                                <MenuItem>{ukulele}</MenuItem>
+                                <MenuItem>{stopRecordingEquipments}</MenuItem>
+                                <MenuItem>{dj}</MenuItem>
+                            </MenuList>
+                            <Text
+                                textTransform="uppercase"
 
-                            fontWeight={"400"}
-                            fontSize={"20px"}>
-                            <FaAngleDown />
-                        </Text>
+                                fontWeight={"400"}
+                                fontSize={"20px"}>
+                                <FaAngleDown />
+                            </Text>
                         </Menu>
 
                     </Flex>
 
                     <Flex>
-                    <Menu>
-  <MenuButton as="text" >
-                        <Text
-                            textTransform="uppercase"
+                        <Menu>
+                            <MenuButton as="text" >
+                                <Text
+                                    textTransform="uppercase"
 
-                            fontWeight={"medium"}
-                            fontSize="13px">
-                            {brands}
-                        </Text>
-                        </MenuButton>
+                                    fontWeight={"medium"}
+                                    fontSize="13px">
+                                    {brands}
+                                </Text>
+                            </MenuButton>
 
-   <MenuList>
-   <MenuItem>{beyerdynamic}</MenuItem>
-    <MenuItem>{nativeInstruments}</MenuItem>
-    <MenuItem>{hexInstruments}</MenuItem>
-    <MenuItem>{laney}</MenuItem>
-    <MenuItem>{stagg}</MenuItem>
-    <MenuItem>{alctron}</MenuItem>
-    <MenuItem>{manaslu}</MenuItem>
-    <MenuItem>{mxl}</MenuItem>
-                        
-   </MenuList>
+                            <MenuList>
+                                <MenuItem>{beyerdynamic}</MenuItem>
+                                <MenuItem>{nativeInstruments}</MenuItem>
+                                <MenuItem>{hexInstruments}</MenuItem>
+                                <MenuItem>{laney}</MenuItem>
+                                <MenuItem>{stagg}</MenuItem>
+                                <MenuItem>{alctron}</MenuItem>
+                                <MenuItem>{manaslu}</MenuItem>
+                                <MenuItem>{mxl}</MenuItem>
+
+                            </MenuList>
 
 
-                        <Text
-                            fontWeight={"400"}
-                            fontSize={"20px"}>
-                            <FaAngleDown />
-                        </Text>
+                            <Text
+                                fontWeight={"400"}
+                                fontSize={"20px"}>
+                                <FaAngleDown />
+                            </Text>
 
-                        
+
 
                         </Menu>
                     </Flex>
@@ -110,7 +109,7 @@ const Navbar = () => {
 
                 </Flex>
 
-                <Flex gap={5}align="center" cursor={"pointer"} >
+                <Flex gap={5} align="center" cursor={"pointer"} >
                     <Text
                         fontWeight={"medium"}
                         fontSize={"13px"}>

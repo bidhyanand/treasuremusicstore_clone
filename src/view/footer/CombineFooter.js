@@ -4,8 +4,8 @@ import Footer from '../../Component/footers/footer/Footer'
 const CombineFooter = () => {
   return (
     <div>
-        <FooterContent/>
-        <Footer/>
+      <FooterContent />
+      <Footer />
     </div>
   )
 }

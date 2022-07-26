@@ -3,6 +3,7 @@ import { FaAngleRight } from "react-icons/fa"
 import Slider from "react-slick";
 import { ourSellingBrands, ViewAllBrands } from "../../../constant/text";
 import sellingBrandsData from '../../../data/selingBrandsData'
+import BrandsCardDesign from "../brandsCardDesign/BrandsCardDesign";
 const SellingBrands = () => {
     const settings = {
         dots: false,
@@ -19,7 +20,7 @@ const SellingBrands = () => {
             settings : {
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         speed: 2000,
@@ -66,14 +67,10 @@ const SellingBrands = () => {
             <Slider {...settings} >
                 {sellingBrandsData.map((data, index) => {
                     return (
-                        <Box  pl = {10} pr = {20}  key={index} >
-
-                            <Image width={20}
-                                ml={8}
-                                src={data.image} alt="sellingBrand">
-
-                            </Image>
-                        </Box>
+                       <BrandsCardDesign
+                       key={index}
+                       data={data}
+                       />
                     )
                 })}
 

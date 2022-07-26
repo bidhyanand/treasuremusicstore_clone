@@ -5,7 +5,7 @@ import CombineFooter from './view/footer/CombineFooter'
 const App = () => {
   return (
     <div>
-     <Header/>
+     {/* <Header/> */}
       <Routing/>
       <CombineFooter/>
       <br/>

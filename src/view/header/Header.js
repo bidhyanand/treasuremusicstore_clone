@@ -4,8 +4,8 @@ import TopHeader from '../../Component/header/topHeader/TopHeader'
 const Header = () => {
   return (
     <>
-    <TopHeader/>
-    <Navbar/>
+      <TopHeader />
+      <Navbar />
     </>
   )
 }
