@@ -12,5 +12,3 @@
 - To use react slick and make it responsive
 - folder structure
 - responsive design
-
-# Screenshots
